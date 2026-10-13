@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formation incendie et SST à Évreux, Eure | TERANGA M&J FORMATION</title>
+<title>Formation SST et sécurité incendie à Évreux, Eure | TERANGA M&J FORMATION</title>
 <meta name="description" content="Formations incendie, évacuation et SST dans vos locaux à Évreux, dans l'Eure et en Normandie. Groupes de 10 maximum, exercices pratiques, devis sur demande.">
 <link rel="canonical" href="https://terangamjformation.fr/">
 
@@ -457,12 +457,9 @@
     .form-grid{grid-template-columns:1fr;}
   }
 
-  /* Ajouts : état des lieux, formulaire, zone */
+  /* Ajouts : formulaire, zone */
   .hero p.proof{font-size:17px;font-weight:600;max-width:60ch;margin:0 0 26px;color:var(--anthracite);}
   .hero-sub{margin:14px 0 0;font-size:13.5px;color:var(--muted);}
-  .etat{margin:0 0 28px;padding:22px 24px;border-left:4px solid var(--orange);background:rgba(255,255,255,.07);border-radius:0 8px 8px 0;}
-  .etat h3{margin:0 0 8px;font-size:20px;color:var(--paper);}
-  .etat p{margin:0;font-size:15.5px;color:var(--paper-2);line-height:1.55;}
   .zone-cities{margin:22px 0 0;font-size:14.5px;color:var(--muted);max-width:52ch;line-height:1.6;}
   .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
   .form-status{margin:14px 0 0;font-size:14.5px;font-weight:600;}
@@ -496,7 +493,7 @@
   <div class="stripe"></div>
   <div class="wrap">
     <p class="hero-tag">Formation incendie & secourisme à Évreux, dans l'Eure, en Normandie et en Île-de-France</p>
-    <h1>Le feu ne prévient pas. Vos équipes doivent être prêtes.</h1>
+    <h1>Quand ça arrive, vos équipes savent quoi faire.</h1>
     <p class="lede">Formez vos collaborateurs à réagir efficacement face à un incendie, une évacuation ou un accident du travail.</p>
     <p class="proof">229 stagiaires formés depuis décembre 2025, 98 % de notes « Très bon » ou « Excellent » en fin de formation.</p>
     <ul class="checks">
@@ -507,7 +504,7 @@
     </ul>
     <div class="hero-cta">
       <a href="#devis" class="btn btn-primary" data-umami-event="cta-devis-hero">Demander un devis</a>
-      <a href="#etat-des-lieux" class="btn btn-ghost" data-umami-event="cta-etat-des-lieux-hero">Recevoir mon état des lieux gratuit</a>
+      <a href="#formations" class="btn btn-ghost" data-umami-event="cta-formations-hero">Voir les formations</a>
     </div>
     <p class="hero-sub">Devis sans engagement, réponse personnalisée.</p>
     <p class="hero-note">Organisme de formation déclaré sous le NDA 28270308227, TVA non applicable (art. 261-4-4° du CGI).</p>
@@ -903,11 +900,7 @@
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos collaborateurs sauraient-ils réagir face à un accident ?</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos équipes connaissent-elles les procédures à appliquer en situation d'urgence ?</li>
       </ul>
-      <div class="etat" id="etat-des-lieux">
-        <h3>Recevez gratuitement l'état des lieux de vos échéances</h3>
-        <p>Une fiche d'une page qui liste vos échéances SST, extincteurs et exercices d'évacuation : ce qui est à jour, ce qui ne l'est pas. Sans engagement.</p>
-      </div>
-      <a href="#devis" class="btn btn-primary" data-preset="État des lieux gratuit" data-umami-event="cta-etat-des-lieux">Recevoir mon état des lieux gratuit</a>
+      <a href="#devis" class="btn btn-primary" data-umami-event="cta-devis-probleme">Faire le point sur mes besoins</a>
     </div>
   </div>
 </section>
@@ -1041,7 +1034,6 @@
               <option>MAC SST</option>
               <option>Plusieurs formations</option>
               <option>Besoin de conseil</option>
-              <option>État des lieux gratuit</option>
             </select>
           </div>
           <div class="field"><label for="f-participants">Nombre de participants (facultatif)</label><input id="f-participants" name="participants" type="number" min="1"></div>
@@ -1164,11 +1156,6 @@
   }
   const track = name => { try { if (window.umami) window.umami.track(name); } catch (e) {} };
 
-  // Boutons qui préselectionnent une formation (ex. état des lieux gratuit)
-  document.querySelectorAll('[data-preset]').forEach(a => {
-    a.addEventListener('click', () => { document.getElementById('f-formation').value = a.dataset.preset; });
-  });
-
   // Formulaire de devis : envoi via Formspree si configuré, sinon mailto pré-rempli
   const form = document.getElementById('devis-form');
   const status = document.getElementById('form-status');
@@ -1178,8 +1165,7 @@
     if (document.getElementById('f-gotcha').value) return; // anti-spam
     const v = id => document.getElementById(id).value.trim();
     const who = v('f-entreprise') || v('f-nom');
-    const etat = v('f-formation') === 'État des lieux gratuit';
-    const subjectTxt = (etat ? 'Demande état des lieux gratuit - ' : 'Demande de devis - ') + who;
+    const subjectTxt = 'Demande de devis - ' + who;
     const fields = {
       'Entreprise': v('f-entreprise'), 'Nom / prénom': v('f-nom'), 'E-mail': v('f-email'),
       'Téléphone': v('f-tel'), 'Formation souhaitée': v('f-formation'),
@@ -1200,7 +1186,7 @@
       body: JSON.stringify(Object.assign({_subject: subjectTxt, email: v('f-email')}, fields))
     }).then(r => {
       if (!r.ok) throw new Error('http ' + r.status);
-      track(etat ? 'etat-des-lieux-envoye' : 'devis-envoye');
+      track('devis-envoye');
       form.innerHTML = '<div class="form-ok"><b>Merci, votre demande est bien envoyée.</b>Vous recevez une réponse personnalisée par e-mail ou par téléphone.</div>';
     }).catch(() => {
       submitBtn.disabled = false; submitBtn.textContent = label;
