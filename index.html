@@ -19,11 +19,11 @@
 <meta property="og:image:alt" content="TERANGA M&J FORMATION, formation incendie, évacuation et SST">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#211f1d">
+<meta name="theme-color" content="#f5f5f1">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -179,845 +179,376 @@
   ]
 }
 </script>
-
 <style>
-  :root{
-    --anthracite:#211f1d;
-    --paper:#f1ece2;
-    --paper-2:#e8e1d2;
-    --fire:#c4281d;
-    --orange:#e8720c;
-    --steel:#2e4756;
-    --muted:#8b8478;
-    --line:#d8d0c0;
-    --display: 'Big Shoulders Display', sans-serif;
-    --body: 'Work Sans', sans-serif;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--anthracite);
-    font-family:var(--body);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    padding-bottom:0;
-  }
-  img,svg{display:block;}
-  a{color:inherit;}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
-  section{scroll-margin-top:24px;}
+:root{--paper:#f5f5f1;--ink:#15202b;--red:#b3261e;--muted:#4f5a64;--rule:#c9ccc4;--panel:#ebebe4;--serif:'Source Serif 4',Georgia,'Times New Roman',serif;--sans:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;-webkit-text-size-adjust:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+img{max-width:100%}
+h1,h2,h3,h4{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:32px;padding-right:32px}
+:focus-visible{outline:3px solid #1b5fbf;outline-offset:2px}
+.btn{display:inline-block;text-decoration:none;font:inherit;font-weight:700;padding:12px 20px;border-radius:2px;border:2px solid transparent;cursor:pointer;line-height:1.2;text-align:center}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#951e17}
+.btn-lg{padding:16px 28px;font-size:18px}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-block{width:100%}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#951e17}
+.btn:disabled{opacity:.6;cursor:wait}
+/* header */
+.top{border-bottom:2px solid var(--ink);background:var(--paper);position:sticky;top:0;z-index:20}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 28px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:48px;height:48px;object-fit:contain;display:block}
+.brand span{font-family:var(--serif);font-weight:700;font-size:21px}
+.top nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;font-size:16px;font-weight:600}
+.top nav a{text-decoration:none}
+.top nav a.btn{text-decoration:none}
+.top nav .tel{white-space:nowrap}
+.kicker{margin:0 0 14px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.kicker.gray{color:var(--muted)}
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-start;padding-top:72px;padding-bottom:64px}
+.hero-main{flex:1 1 560px;min-width:0}
+h1{font-family:var(--serif);font-weight:600;font-size:66px;line-height:1.05;letter-spacing:-.015em}
+.lede{margin:26px 0 0;font-size:22px;line-height:1.5;max-width:34em}
+.cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center}
+.alt-tel{font-weight:700;font-size:18px}
+.small{margin:16px 0 0;font-size:15px;color:var(--muted)}
+.brief{flex:0 1 340px;min-width:280px;background:#fff;border:1px solid var(--ink);padding:24px 28px}
+.brief-t{margin:0 0 12px;font-family:var(--serif);font-weight:700;font-size:20px}
+.brief dl{margin:0;font-size:16px}
+.brief dl div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--rule)}
+.brief dl div:last-child{border-bottom:1px solid var(--rule)}
+.brief dt{color:var(--muted)}
+.brief dd{margin:0;font-weight:600;text-align:right}
+/* chiffres */
+.figures{background:var(--ink);color:var(--paper)}
+.figs{display:flex;flex-wrap:wrap;gap:28px 48px;padding-top:44px;padding-bottom:18px}
+.figs>div{flex:1 1 230px}
+.figs .n{margin:0;font-family:var(--serif);font-weight:600;font-size:56px;line-height:1}
+.figs p+p,.figs div p:last-child{margin:10px 0 0}
+.figs .n+p{font-size:16px}
+.figures .src{margin-top:0;padding-bottom:26px;font-size:13px;color:#b6c0ca;line-height:1.5}
+/* sections */
+.sec{padding-top:84px;padding-bottom:20px}
+h2{font-family:var(--serif);font-weight:600;font-size:42px;line-height:1.12}
+.sub{margin:12px 0 34px;max-width:40em;color:var(--muted)}
+.flist{border-top:2px solid var(--ink)}
+details.f{border-bottom:1px solid #b2b6ae}
+details.f summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;padding:22px 0}
+details.f summary::-webkit-details-marker{display:none}
+.f-name{flex:2 1 320px;min-width:0}
+.f-name b{display:block;font-family:var(--serif);font-weight:600;font-size:24px;line-height:1.2}
+.f-name small{display:block;margin-top:5px;font-size:17px;color:var(--muted)}
+.f-dur{flex:0 0 96px;font-family:var(--serif);font-weight:600;font-size:26px}
+.f-meta{flex:1 1 190px;font-size:16px}
+.f-meta i{display:block;font-style:normal;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.f-more{flex:0 0 auto;font-weight:700;font-size:15px;color:var(--red)}
+.f-more::before{content:"Voir le programme  +"}
+details.f[open] .f-more::before{content:"Masquer  \2212"}
+.f-body{padding:4px 0 30px}
+.f-hook{margin:0 0 20px;font-size:19px;max-width:40em}
+.f-cols{display:flex;flex-wrap:wrap;gap:24px 56px}
+.f-cols>div{flex:1 1 320px;min-width:0}
+.f-cols h4{margin:18px 0 6px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.f-cols h4:first-child{margin-top:0}
+.f-cols p{margin:0}
+.f-cols ul,.f-cols ol{margin:0;padding-left:22px}
+.f-cols li{margin:0 0 8px}
+.f-cols li b{font-weight:700}
+.f-foot{margin:24px 0 0}
+.after{margin:22px 0 0}
+/* avis */
+.avis{display:flex;flex-wrap:wrap;gap:40px 64px;align-items:flex-start}
+.pull{flex:1 1 420px;min-width:0;margin:0;border-left:6px solid var(--red);padding:6px 0 6px 28px}
+.pull blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.25}
+.pull figcaption{margin-top:16px;font-size:15px;color:var(--muted)}
+.qs{flex:1 1 380px;min-width:0}
+.q{padding:12px 0;border-top:1px solid var(--rule)}
+.q p{margin:0}
+.q span{display:block;margin-top:4px;font-size:14px;color:var(--muted)}
+.src{font-size:13px;color:var(--muted);margin:12px 0 0}
+/* méthode */
+.band{background:var(--panel);margin-top:64px}
+.band .wrap{padding-top:80px;padding-bottom:80px}
+.band h2{margin-bottom:36px}
+.steps{display:flex;flex-wrap:wrap;gap:32px}
+.steps>div{flex:1 1 230px;min-width:0;border-top:3px solid var(--ink);padding-top:16px}
+.sn{margin:0;font-family:var(--serif);font-weight:700;font-size:40px;line-height:1;color:var(--red)}
+.steps h3{margin:12px 0 6px;font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.2}
+.steps p:last-child{margin:0;color:var(--muted)}
+/* pratique + zone */
+.two{display:flex;flex-wrap:wrap;gap:48px 72px;padding-top:84px}
+.two>div{flex:1 1 380px;min-width:0}
+.two h2{font-size:36px;margin-bottom:16px}
+.two p{margin:0 0 14px}
+.gray-t{margin:26px 0 8px;font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-family:var(--sans)}
+.zone-h{font-weight:700}
+/* faq */
+.faq{max-width:900px;padding-top:64px}
+.faq h2{margin-bottom:24px}
+.faq-list{border-top:2px solid var(--ink)}
+.faq-list details{padding:16px 0;border-bottom:1px solid #b2b6ae}
+.faq-list summary{cursor:pointer;font-weight:700;font-size:19px}
+.faq-list details[open] summary{margin-bottom:8px}
+.faq-list p{margin:0;color:var(--muted);font-size:17px}
+/* devis */
+.devis{background:var(--ink);color:var(--paper);margin-top:64px}
+.dv{display:flex;flex-wrap:wrap;gap:44px 72px;padding-top:80px;padding-bottom:80px}
+.dv>div:first-child{flex:1 1 340px;min-width:0}
+.dv h2{margin-bottom:16px;font-size:44px}
+.dv-l{margin:0 0 20px;font-size:19px}
+.dv-c{margin:0;font-size:17px;color:#d3d9df}
+.dv-c a{color:#fff;font-weight:700}
+.form-shell{flex:1 1 440px;min-width:0;background:var(--paper);color:var(--ink);padding:32px}
+.form-grid{display:flex;flex-wrap:wrap;gap:16px}
+.field{flex:1 1 200px;min-width:0}
+.field.full{flex:1 1 100%}
+.field label{display:block;font-size:15px;font-weight:600;margin-bottom:6px}
+.field input,.field select,.field textarea{display:block;width:100%;padding:12px;border:1px solid #6d7780;border-radius:2px;font:inherit;background:#fff;color:var(--ink)}
+.field textarea{min-height:96px;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0;font-size:14.5px;color:#3d4853}
+.consent input{margin-top:4px;width:18px;height:18px;flex:0 0 auto}
+.form-status{margin:12px 0 0;font-size:15px}
+.form-status.err{color:#9b1c14;font-weight:600}
+.form-note{margin:14px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+.form-ok{padding:20px 0;font-size:18px}
+.form-ok b{display:block;font-family:var(--serif);font-size:26px;margin-bottom:6px}
+/* pied + mentions */
+.foot{padding-top:34px;padding-bottom:30px;display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:space-between;font-size:14.5px;color:var(--muted)}
+.foot p{margin:0;max-width:36em}
+.foot b{color:var(--ink)}
+.mentions{background:var(--panel);font-size:14px;color:#3d4853}
+.mentions .wrap{padding-top:34px;padding-bottom:90px}
+.mentions h5{margin:0 0 14px;font-family:var(--serif);font-size:20px;color:var(--ink)}
+.mentions h6{margin:14px 0 4px;font-size:14px;color:var(--ink)}
+.mentions p{margin:0 0 8px}
+.mentions-grid{display:flex;flex-wrap:wrap;gap:20px 40px}
+.mentions-grid>div{flex:1 1 280px;min-width:0}
+.sticky-bar{display:none}
+@media(max-width:900px){
+  h1{font-size:46px}
+  h2{font-size:34px}
+  .hero{padding-top:44px}
+  .pull blockquote{font-size:27px}
+  .figs .n{font-size:46px}
+  .sec,.two{padding-top:60px}
+}
+@media(max-width:700px){
+  body{font-size:17px}
+  .wrap{padding-left:20px;padding-right:20px}
+  .top{position:static}
+  .top nav a:not(.tel):not(.btn){display:none}
+  h1{font-size:38px}
+  .lede{font-size:19px}
+  .form-shell{padding:22px}
+  .sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);border-top:2px solid #fff}
+  .sticky-bar a{flex:1;text-align:center;color:#fff;text-decoration:none;font-weight:700;padding:15px 8px}
+  .sticky-bar .quote{background:var(--red)}
+  .f-more{flex:1 1 100%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.top,.sticky-bar{display:none}}
 
-  /* ---------- Header ---------- */
-  header{padding:20px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:50;}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .brand{display:flex;align-items:center;gap:12px;}
-  .logo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1.5px solid var(--line);background:#fff;}
-  .mark{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:0.02em;}
-  .mark span{color:var(--fire);}
-  nav{display:flex;align-items:center;gap:22px;font-size:14.5px;font-weight:500;}
-  nav a.navlink{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px;transition:border-color .15s;}
-  nav a.navlink:hover{border-color:var(--fire);}
-  .navtel{display:flex;align-items:center;gap:6px;font-weight:600;text-decoration:none;color:var(--anthracite);}
-  .navtel svg{width:15px;height:15px;color:var(--fire);}
-
-  /* ---------- Buttons ---------- */
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--body);font-weight:600;font-size:15px;padding:14px 26px;border-radius:3px;text-decoration:none;border:none;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease;}
-  .btn-primary{background:var(--fire);color:var(--paper);}
-  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 14px rgba(196,40,29,0.25);}
-  .btn-ghost{color:var(--anthracite);border:1.5px solid var(--anthracite);background:transparent;}
-  .btn-ghost:hover{background:var(--anthracite);color:var(--paper);}
-  .btn-block{width:100%;}
-
-  /* ---------- Hero ---------- */
-  .hero{padding:64px 0 56px;position:relative;overflow:hidden;}
-  .hero .wrap{position:relative;z-index:2;}
-  .hero-tag{font-size:14px;color:var(--steel);font-weight:600;margin:0 0 16px;}
-  h1{font-family:var(--display);font-weight:900;font-size:clamp(36px,5.6vw,60px);line-height:1.0;margin:0 0 22px;max-width:15ch;letter-spacing:-0.01em;}
-  .hero p.lede{font-size:18px;max-width:56ch;color:#3c3934;margin:0 0 10px;}
-  .hero p.lede2{font-size:16px;max-width:56ch;color:var(--muted);margin:0 0 26px;}
-  .checks{list-style:none;margin:0 0 30px;padding:0;display:grid;grid-template-columns:repeat(2,auto);gap:10px 28px;}
-  .checks li{font-size:14.5px;display:flex;align-items:center;gap:8px;color:#3c3934;}
-  .checks li svg{width:16px;height:16px;color:var(--fire);flex-shrink:0;}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-  .hero-note{margin-top:16px;font-size:13px;color:var(--muted);}
-  .stripe{position:absolute;right:-60px;top:-40px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 35% 35%, rgba(232,114,12,0.14), rgba(232,114,12,0) 70%);z-index:1;}
-
-  /* ---------- Benefits bar ---------- */
-  .benefits{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2);padding:34px 0;}
-  .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .benefit{display:flex;flex-direction:column;gap:6px;}
-  .benefit svg{width:26px;height:26px;color:var(--fire);}
-  .benefit b{font-size:15px;font-weight:700;}
-  .benefit span{font-size:13px;color:var(--muted);line-height:1.4;}
-  @media (max-width:760px){.benefits-grid{grid-template-columns:repeat(2,1fr);}}
-
-  /* ---------- Section shell ---------- */
-  .section{padding:64px 0;}
-  .section.alt{background:var(--paper-2);}
-  .section-head{max-width:62ch;margin:0 0 36px;}
-  .eyebrow{font-size:13px;font-weight:600;color:var(--fire);margin:0 0 10px;}
-  h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.6vw,38px);margin:0 0 12px;line-height:1.05;}
-  .section-head p{font-size:16px;color:#3c3934;margin:0;}
-
-  /* ---------- Experience terrain ---------- */
-  .exp{display:grid;grid-template-columns:minmax(0,760px);gap:44px;align-items:center;} /* 2 colonnes (1fr 1fr) quand la photo est de retour */
-  .exp-text p{font-size:16px;color:#3c3934;margin:0 0 16px;}
-  .exp-note{font-size:13.5px;color:#3c3934;background:var(--paper-2);border-left:3px solid var(--fire);border-radius:0 6px 6px 0;padding:14px 16px;}
-  .exp-visual{background:var(--anthracite);border-radius:8px;min-height:260px;display:flex;align-items:center;justify-content:center;color:var(--paper-2);font-size:13px;text-align:center;padding:20px;}
-  @media (max-width:760px){.exp{grid-template-columns:1fr;}}
-
-  /* ---------- Formations cards ---------- */
-  .tiles{display:grid;grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));gap:14px;}
-  .tile{position:relative;background:var(--paper);border:1.5px solid var(--line);border-radius:6px;padding:20px 18px 18px;cursor:pointer;text-align:left;font-family:var(--body);transition:background .15s ease, color .15s ease, border-color .15s ease, transform .1s ease;}
-  .tile:hover{transform:translateY(-2px);border-color:var(--muted);}
-  .tile .icon{width:32px;height:32px;margin-bottom:14px;color:var(--anthracite);}
-  .tile .name{font-family:var(--display);font-weight:700;font-size:18px;line-height:1.1;margin:0 0 8px;}
-  .tile .duree{display:block;font-size:12px;font-weight:600;letter-spacing:0.03em;color:var(--muted);text-transform:uppercase;margin-bottom:10px;}
-  .tile .benefit-line{font-size:13px;color:#4a4640;margin:0 0 12px;line-height:1.4;}
-  .tile .cta-row{font-size:12.5px;font-weight:600;color:var(--fire);display:flex;align-items:center;gap:4px;}
-  .tile .cta-row svg{width:12px;height:12px;transition:transform .15s;}
-  .tile.active{background:var(--anthracite);border-color:var(--anthracite);color:var(--paper);}
-  .tile.active .icon{color:var(--paper);}
-  .tile.active .duree{color:var(--paper-2);}
-  .tile.active .benefit-line{color:var(--paper-2);}
-  .tile.active .cta-row{color:var(--orange);}
-  .tile.active .cta-row svg{transform:rotate(90deg);}
-  .tile[data-accent="fire"].active{background:var(--fire);border-color:var(--fire);}
-  .tile[data-accent="orange"].active{background:var(--orange);border-color:var(--orange);}
-  .tile[data-accent="steel"].active{background:var(--steel);border-color:var(--steel);}
-
-  /* ---------- Fiche ---------- */
-  .fiche-wrap{margin-top:32px;}
-  .fiche{border:1.5px solid var(--line);border-radius:8px;background:#fbf9f4;overflow:hidden;}
-  .fiche-head{padding:30px 32px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
-  .fiche-head h3{font-family:var(--display);font-weight:800;font-size:clamp(23px,3vw,30px);margin:0 0 8px;}
-  .fiche-head .hook{color:#3c3934;font-size:15px;max-width:52ch;margin:0;}
-  .fiche-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);white-space:nowrap;}
-  .fiche-meta div{display:flex;flex-direction:column;gap:3px;}
-  .fiche-meta b{font-weight:700;color:var(--anthracite);font-size:14.5px;}
-  .fiche-body{display:grid;grid-template-columns:1fr 1.3fr;}
-  @media (max-width:760px){.fiche-body{grid-template-columns:1fr;}.fiche-body .col-left{border-right:none !important;border-bottom:1px solid var(--line);}}
-  .col-left{padding:26px 28px;border-right:1px solid var(--line);}
-  .col-right{padding:26px 32px;}
-  .block{margin-bottom:22px;}
-  .block:last-child{margin-bottom:0;}
-  .block h4{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);margin:0 0 9px;}
-  .block p{margin:0;font-size:14.5px;color:#2c2a27;}
-  .block ul{margin:0;padding-left:18px;font-size:14.5px;color:#2c2a27;}
-  .block ul li{margin-bottom:5px;}
-  .programme{counter-reset:step;list-style:none;margin:0;padding:0;}
-  .programme li{counter-increment:step;position:relative;padding:0 0 16px 38px;margin-bottom:16px;border-left:2px solid var(--line);font-size:14.5px;color:#2c2a27;}
-  .programme li:last-child{border-left-color:transparent;margin-bottom:0;padding-bottom:0;}
-  .programme li::before{content:counter(step);position:absolute;left:-14px;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--anthracite);color:var(--paper);font-family:var(--display);font-weight:700;font-size:12.5px;display:flex;align-items:center;justify-content:center;}
-  .programme li b{display:block;font-weight:700;color:var(--anthracite);margin-bottom:3px;}
-  .fiche-foot{padding:22px 32px 26px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .fiche-foot .valid{font-size:13.5px;color:var(--muted);}
-  .fiche-foot .valid b{color:var(--anthracite);}
-  .panel{display:none;}
-  .panel.active{display:block;}
-
-  /* ---------- Practice / photos ---------- */
-  .practice-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:30px;}
-  .photo-ph{aspect-ratio:4/3;border:1.5px dashed var(--line);border-radius:6px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:12.5px;color:var(--muted);}
-  @media (max-width:760px){.practice-grid{grid-template-columns:1fr;}}
-
-  /* ---------- Bloc problème ---------- */
-  .problem{background:var(--anthracite);color:var(--paper);border-radius:10px;padding:48px 40px;}
-  .problem h2{color:var(--paper);}
-  .problem-list{list-style:none;margin:24px 0 30px;padding:0;display:grid;gap:14px;}
-  .problem-list li{display:flex;gap:12px;font-size:16px;color:var(--paper-2);}
-  .problem-list li svg{width:18px;height:18px;color:var(--orange);flex-shrink:0;margin-top:2px;}
-  @media (max-width:760px){.problem{padding:36px 24px;}}
-
-  /* ---------- Segments ---------- */
-  .segments{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
-  .segment{background:var(--paper);border:1.5px solid var(--line);border-radius:6px;padding:20px;}
-  .segment b{display:block;font-family:var(--display);font-weight:700;font-size:16px;margin-bottom:6px;}
-  .segment span{font-size:13.5px;color:var(--muted);line-height:1.4;}
-  @media (max-width:760px){.segments{grid-template-columns:1fr 1fr;}}
-  @media (max-width:500px){.segments{grid-template-columns:1fr;}}
-
-  /* ---------- Steps ---------- */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px;}
-  .step{text-align:left;}
-  .step-num{font-family:var(--display);font-weight:900;font-size:30px;color:var(--fire);margin-bottom:8px;}
-  .step b{display:block;font-size:15px;margin-bottom:6px;}
-  .step span{font-size:13.5px;color:var(--muted);line-height:1.4;}
-  @media (max-width:760px){.steps{grid-template-columns:1fr 1fr;}}
-  @media (max-width:500px){.steps{grid-template-columns:1fr;}}
-
-  /* ---------- Testimonials ---------- */
-  /* ---------- Chiffres clés ---------- */
-  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  .stat{background:#fbf9f4;border:1.5px solid var(--line);border-top:5px solid var(--fire);border-radius:8px;padding:26px 26px 22px;}
-  .stat:nth-child(2){border-top-color:var(--orange);}
-  .stat:nth-child(3){border-top-color:var(--steel);}
-  .stat .num{font-family:var(--display);font-weight:900;font-size:clamp(46px,6vw,64px);line-height:1;letter-spacing:-0.01em;margin:0;}
-  .stat .num small{font-size:0.55em;font-weight:800;}
-  .stat .what{font-size:15.5px;color:#2c2a27;margin:12px 0 4px;line-height:1.4;}
-  .stat .more{font-size:13.5px;color:var(--muted);margin:0;line-height:1.4;}
-  .stats-src{margin:22px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6;max-width:90ch;}
-  @media (max-width:760px){.stats-grid{grid-template-columns:1fr;}}
-
-  /* ---------- Témoignages ---------- */
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 20px;}
-  .testi{margin:0;background:#fbf9f4;border:1.5px solid var(--line);border-left:5px solid var(--fire);border-radius:6px;padding:22px 22px 18px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;}
-  .testi:nth-child(3n+2){border-left-color:var(--orange);}
-  .testi:nth-child(3n){border-left-color:var(--steel);}
-  .testi blockquote{margin:0;font-family:var(--display);font-weight:700;font-size:21px;line-height:1.25;color:var(--anthracite);}
-  .testi figcaption{font-size:12.5px;color:var(--muted);line-height:1.5;}
-  .testi figcaption b{display:block;color:var(--anthracite);font-weight:700;font-size:13px;}
-  .testi-src{margin:0 0 28px;font-size:12.5px;color:var(--muted);line-height:1.6;}
-  @media (max-width:980px){.testi-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:640px){.testi-grid{grid-template-columns:1fr;}.testi blockquote{font-size:20px;}}
-  .logos-row{display:flex;gap:14px;flex-wrap:wrap;}
-  .logo-ph{flex:1;min-width:120px;height:60px;border:1.5px dashed var(--line);border-radius:6px;background:var(--paper);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);}
-
-  /* ---------- Zone géographique ---------- */
-  .zone-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
-  .zone-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
-  .zone-list li{display:flex;align-items:center;gap:10px;font-size:15.5px;}
-  .zone-list li svg{width:18px;height:18px;color:var(--fire);}
-  .radar{position:relative;width:220px;height:220px;margin:0 auto;}
-  .radar svg{width:100%;height:100%;}
-  @media (max-width:760px){.zone-wrap{grid-template-columns:1fr;}}
-
-  /* ---------- FAQ ---------- */
-  .faq-list{max-width:760px;}
-  details{border-bottom:1px solid var(--line);padding:18px 0;}
-  details summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-  details summary::-webkit-details-marker{display:none;}
-  details summary::after{content:"+";font-size:22px;color:var(--fire);font-family:var(--body);flex-shrink:0;}
-  details[open] summary::after{content:"−";}
-  details p{font-size:14.5px;color:#3c3934;margin:12px 0 0;max-width:64ch;}
-
-  /* ---------- Formulaire ---------- */
-  .form-shell{background:var(--paper-2);border:1.5px solid var(--line);border-radius:10px;padding:40px;}
-  @media (max-width:600px){.form-shell{padding:24px;}}
-  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .field{display:flex;flex-direction:column;gap:6px;}
-  .field.full{grid-column:1/-1;}
-  .field label{font-size:13px;font-weight:600;color:var(--anthracite);}
-  .field input, .field select, .field textarea{
-    font-family:var(--body);font-size:15px;padding:12px 14px;border:1.5px solid var(--line);border-radius:4px;background:#fff;color:var(--anthracite);
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--fire);}
-  .field textarea{resize:vertical;min-height:90px;}
-  .consent{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--muted);margin:20px 0;}
-  .consent input{margin-top:3px;}
-  .form-note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;}
-
-  /* ---------- Footer ---------- */
-  footer{border-top:1px solid var(--line);padding:44px 0 40px;}
-  footer .wrap{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-  footer h5{font-family:var(--display);font-weight:700;font-size:18px;margin:0 0 10px;}
-  footer p, footer a{font-size:14px;color:#4a4640;margin:0 0 6px;text-decoration:none;}
-  footer .legal{max-width:420px;color:var(--muted);font-size:12.5px;line-height:1.6;}
-  footer .col{min-width:200px;}
-
-  .mentions{background:var(--paper-2);border-top:1px solid var(--line);padding:32px 0 96px;}
-  .mentions h5{font-family:var(--display);font-weight:700;font-size:16px;margin:0 0 22px;}
-  .mentions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .mentions h6{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;color:var(--muted);margin:0 0 6px;}
-  .mentions p{font-size:13px;line-height:1.6;color:#4a4640;margin:0 0 18px;}
-  .mentions p:last-child{margin-bottom:0;}
-  .mentions a{text-decoration:underline;}
-  @media (max-width:760px){.mentions-grid{grid-template-columns:1fr;}}
-
-  /* En-tête mobile : la barre fixe du bas porte déjà Appeler / Devis */
-  @media (max-width:760px){
-    header{padding:12px 0;}
-    header nav{display:none;}
-    .mark{font-size:17px;}
-    .logo{width:36px;height:36px;}
-  }
-
-  /* ---------- Sticky mobile bar ---------- */
-  .sticky-bar{display:none;}
-  @media (max-width:760px){
-    .sticky-bar{
-      display:flex;position:fixed;left:0;right:0;bottom:0;z-index:100;
-      background:var(--anthracite);border-top:1px solid rgba(255,255,255,0.1);
-      padding-bottom:env(safe-area-inset-bottom, 0);
-    }
-    .sticky-bar a{flex:1;text-align:center;padding:15px 10px;font-size:14.5px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;}
-    .sticky-bar a svg{width:16px;height:16px;}
-    .sticky-bar .call{color:var(--paper);border-right:1px solid rgba(255,255,255,0.12);}
-    .sticky-bar .quote{color:var(--paper);background:var(--fire);}
-    body{padding-bottom:58px;}
-  }
-
-  @media (max-width:600px){
-    .fiche-head{padding:24px 20px 18px;}
-    .col-left,.col-right{padding:22px 20px;}
-    .fiche-foot{padding:18px 20px 22px;flex-direction:column;align-items:flex-start;}
-    .checks{grid-template-columns:1fr;}
-    .exp-visual{min-height:180px;}
-    .form-grid{grid-template-columns:1fr;}
-  }
-
-  /* Ajouts : formulaire, zone */
-  .hero p.proof{font-size:17px;font-weight:600;max-width:60ch;margin:0 0 26px;color:var(--anthracite);}
-  .hero-sub{margin:14px 0 0;font-size:13.5px;color:var(--muted);}
-  .zone-cities{margin:22px 0 0;font-size:14.5px;color:var(--muted);max-width:52ch;line-height:1.6;}
-  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-  .form-status{margin:14px 0 0;font-size:14.5px;font-weight:600;}
-  .form-status.err{color:var(--fire);}
-  .form-ok{padding:34px 28px;text-align:center;}
-  .form-ok b{display:block;font-size:22px;margin-bottom:10px;}
 </style>
 </head>
-<body>
 
-<header>
-  <div class="wrap">
-    <div class="brand">
-      <img class="logo" src="data:image/jpeg;base64,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" width="42" height="42" alt="Logo TERANGA M&J FORMATION">
-      <div class="mark">TERANGA <span>M&J</span> FORMATION</div>
-    </div>
+<body id="haut">
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#haut"><img src="data:image/jpeg;base64,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" alt="Logo TERANGA M&amp;J FORMATION" width="48" height="48"><span>Teranga M&amp;J Formation</span></a>
     <nav>
-      <a class="navlink" href="#formations">Formations</a>
-      <a class="navlink" href="#faq">FAQ</a>
-      <a class="navtel" href="tel:+33668894338" data-umami-event="appel">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
-        06 68 89 43 38
-      </a>
-      <a href="#devis" class="btn btn-primary" style="padding:10px 18px;font-size:14px;" data-umami-event="cta-devis-header">Demander un devis</a>
+      <a href="#formations">Formations</a><a href="#methode">Méthode</a><a href="#zone">Zone</a><a href="#faq">Questions</a>
+      <a class="tel" href="tel:+33668894338" data-umami-event="appel">06 68 89 43 38</a>
+      <a class="btn btn-red" href="#devis" data-umami-event="cta-devis-header">Demander un devis</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="stripe"></div>
-  <div class="wrap">
-    <p class="hero-tag">Formation incendie & secourisme à Évreux, dans l'Eure, en Normandie et en Île-de-France</p>
+<main>
+<section class="wrap hero">
+  <div class="hero-main">
+    <p class="kicker">Formation incendie et secourisme en entreprise</p>
     <h1>Quand ça arrive, vos équipes savent quoi faire.</h1>
-    <p class="lede">Formez vos collaborateurs à réagir efficacement face à un incendie, une évacuation ou un accident du travail.</p>
-    <p class="proof">229 stagiaires formés depuis décembre 2025, 98 % de notes « Très bon » ou « Excellent » en fin de formation.</p>
-    <ul class="checks">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Formation dans vos locaux</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Mise en situation pratique</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Groupes à taille humaine</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Incendie, évacuation, secourisme</li>
-    </ul>
-    <div class="hero-cta">
-      <a href="#devis" class="btn btn-primary" data-umami-event="cta-devis-hero">Demander un devis</a>
-      <a href="#formations" class="btn btn-ghost" data-umami-event="cta-formations-hero">Voir les formations</a>
+    <p class="lede">Formez vos collaborateurs à réagir face à un incendie, une évacuation ou un accident du travail. La formation se déroule chez vous, avec exercices pratiques à chaque session.</p>
+    <div class="cta"><a class="btn btn-red btn-lg" href="#devis" data-umami-event="cta-devis-hero">Demander un devis</a><a class="alt-tel" href="tel:+33668894338" data-umami-event="appel">ou appeler le 06 68 89 43 38</a></div>
+    <p class="small">Devis gratuit et sans engagement. Réponse personnalisée par e-mail ou par téléphone.</p>
+  </div>
+  <aside class="brief"><p class="brief-t">En bref</p>
+    <dl>
+      <div><dt>Lieu</dt><dd>Dans vos locaux</dd></div>
+      <div><dt>Groupe</dt><dd>10 personnes au plus</dd></div>
+      <div><dt>Durées</dt><dd>De 1 h à 14 h</dd></div>
+      <div><dt>Zone</dt><dd>Normandie, Île-de-France</dd></div>
+      <div><dt>Tarif</dt><dd>Sur devis</dd></div>
+    </dl>
+  </aside>
+</section>
+
+<section class="figures" id="resultats" aria-label="Chiffres clés">
+  <div class="wrap figs">
+    <div><p class="n">près de 280</p><p>stagiaires formés depuis décembre&nbsp;2025, en 23 sessions</p></div>
+    <div><p class="n">98&nbsp;%</p><p>de notes «&nbsp;Très bon&nbsp;» ou «&nbsp;Excellent&nbsp;» en fin de formation</p></div>
+    <div><p class="n">853&nbsp;h</p><p>de formation suivies par les stagiaires</p></div>
+  </div>
+  <p class="wrap src">Sources : bilan pédagogique et financier (23 sessions, du 1er décembre 2025 au 16 octobre 2026), nombre de stagiaires arrondi à la dizaine ; 828 notes relevées sur 17 groupes de stagiaires évalués en fin de formation, de janvier à octobre 2026.</p>
+</section>
+
+<section class="wrap sec" id="formations">
+  <p class="kicker">Le catalogue</p>
+  <h2>Cinq formations, toutes réalisables chez vous</h2>
+  <p class="sub">Chaque session combine apports courts et mise en pratique. Le formateur apporte son matériel. Ouvrez une formation pour voir son programme.</p>
+  <div class="flist">
+<details class="f">
+  <summary>
+    <span class="f-name"><b>Manipulation d'extincteur</b><small>Reconnaître un départ de feu et agir avec le bon geste.</small></span>
+    <span class="f-dur">1 h</span>
+    <span class="f-meta"><i>Pour qui</i>Tout salarié</span>
+    <span class="f-meta"><i>Validation</i>Attestation de formation individuelle</span>
+    <span class="f-more" aria-hidden="true"></span>
+  </summary>
+  <div class="f-body">
+    <p class="f-hook">Une session courte pour apprendre à reconnaître un départ de feu et à agir avec le bon extincteur, dans le bon geste.</p>
+    <div class="f-cols">
+      <div><h4>Public concerné</h4><p>Tout salarié souhaitant s'initier à la lutte contre l'incendie, y compris hors désignation officielle.</p><h4>Prérequis</h4><p>Aucun.</p><h4>Objectifs</h4><ul><li>Identifier les classes de feu (A à F)</li><li>Choisir l'agent extincteur adapté</li><li>Utiliser un extincteur en sécurité</li></ul></div>
+      <div><h4>Programme</h4><ol><li><b>Le triangle du feu</b> Comprendre comment un feu naît et se propage.</li><li><b>Les classes de feu</b> Reconnaître un feu A, B, C, D ou F et l'agent extincteur qui lui correspond.</li><li><b>Les types d'extincteurs</b> Eau pulvérisée, CO₂ : usages, limites, entretien.</li><li><b>Mise en pratique</b> Manipulation d'un extincteur sur générateur de flammes écologique.</li></ol></div>
     </div>
-    <p class="hero-sub">Devis sans engagement, réponse personnalisée.</p>
-    <p class="hero-note">Organisme de formation déclaré sous le NDA 28270308227, TVA non applicable (art. 261-4-4° du CGI).</p>
+    <p class="f-foot"><a class="btn btn-line" href="#devis" data-preset="extincteur" data-umami-event="devis-formation">Demander un devis pour cette formation</a></p>
+  </div>
+</details>
+<details class="f">
+  <summary>
+    <span class="f-name"><b>Équipier de Première Intervention</b><small>Intervenir dans les premières minutes, avant l'arrivée des secours.</small></span>
+    <span class="f-dur">3 h 30</span>
+    <span class="f-meta"><i>Pour qui</i>Salariés désignés EPI</span>
+    <span class="f-meta"><i>Validation</i>Attestation de formation individuelle</span>
+    <span class="f-more" aria-hidden="true"></span>
+  </summary>
+  <div class="f-body">
+    <p class="f-hook">Forme les salariés désignés EPI à intervenir dans les premières minutes d'un départ de feu, avant l'arrivée des secours.</p>
+    <div class="f-cols">
+      <div><h4>Public concerné</h4><p>Personnel désigné équipier de première intervention (EPI/ESI) dans l'organisation incendie de l'établissement.</p><h4>Prérequis</h4><p>Aucun.</p><h4>Objectifs</h4><ul><li>Connaître son rôle dans le plan d'organisation incendie</li><li>Donner l'alerte selon la procédure interne</li><li>Utiliser les moyens de première intervention (extincteurs, RIA)</li><li>Agir en sécurité face à un feu réel</li></ul></div>
+      <div><h4>Programme</h4><ol><li><b>Cadre réglementaire</b> Rôle de l'EPI, obligations de l'employeur (Code du travail, art. R.4227-28, R.4227-38, R.4227-39).</li><li><b>Naissance et propagation du feu</b> Triangle du feu, classes de feu, comportement des fumées.</li><li><b>Moyens de première intervention</b> Extincteurs et robinets d'incendie armés (RIA) : fonctionnement, usage, limites.</li><li><b>Alerte et consignes</b> Donner l'alerte, guider les secours, articulation avec l'évacuation.</li><li><b>Pratique sur feux réels</b> Extinction de plusieurs types de feux en conditions encadrées.</li></ol></div>
+    </div>
+    <p class="f-foot"><a class="btn btn-line" href="#devis" data-preset="epi" data-umami-event="devis-formation">Demander un devis pour cette formation</a></p>
+  </div>
+</details>
+<details class="f">
+  <summary>
+    <span class="f-name"><b>Formation à l'évacuation</b><small>Organiser une évacuation rapide, ordonnée et complète.</small></span>
+    <span class="f-dur">3 h</span>
+    <span class="f-meta"><i>Pour qui</i>Guides-file et serre-file</span>
+    <span class="f-meta"><i>Validation</i>Attestation de formation individuelle</span>
+    <span class="f-more" aria-hidden="true"></span>
+  </summary>
+  <div class="f-body">
+    <p class="f-hook">Prépare les guides-file et serre-file à organiser une évacuation rapide, ordonnée et complète.</p>
+    <div class="f-cols">
+      <div><h4>Public concerné</h4><p>Salariés désignés guide-file ou serre-file, membres du service de sécurité incendie de l'établissement.</p><h4>Prérequis</h4><p>Aucun.</p><h4>Objectifs</h4><ul><li>Connaître les missions du guide-file et du serre-file</li><li>Organiser le cheminement vers les points de rassemblement</li><li>Vérifier l'évacuation complète d'une zone</li><li>Prendre en compte les personnes en situation de handicap</li></ul></div>
+      <div><h4>Programme</h4><ol><li><b>Cadre réglementaire</b> Obligations liées à l'évacuation, rôle de chacun dans le dispositif.</li><li><b>Missions du guide-file et du serre-file</b> Répartition des rôles, vérification des zones, gestion des personnes en difficulté.</li><li><b>Cheminement et points de rassemblement</b> Lecture des plans d'évacuation, itinéraires, issues de secours.</li><li><b>Exercice pratique</b> Évacuation simulée sur site, chronométrée.</li><li><b>Retour d'expérience</b> Analyse de l'exercice, axes d'amélioration.</li></ol></div>
+    </div>
+    <p class="f-foot"><a class="btn btn-line" href="#devis" data-preset="evacuation" data-umami-event="devis-formation">Demander un devis pour cette formation</a></p>
+  </div>
+</details>
+<details class="f">
+  <summary>
+    <span class="f-name"><b>SST : Sauveteur Secouriste du Travail</b><small>Protéger, alerter, secourir face à un accident du travail.</small></span>
+    <span class="f-dur">14 h</span>
+    <span class="f-meta"><i>Pour qui</i>Tout salarié</span>
+    <span class="f-meta"><i>Validation</i>Certificat SST, valable 24 mois</span>
+    <span class="f-more" aria-hidden="true"></span>
+  </summary>
+  <div class="f-body">
+    <p class="f-hook">La formation initiale de secourisme en entreprise, conforme au référentiel national SST.</p>
+    <div class="f-cols">
+      <div><h4>Public concerné</h4><p>Tout salarié, avec ou sans mission de secours désignée dans l'entreprise.</p><h4>Prérequis</h4><p>Aucun.</p><h4>Objectifs</h4><ul><li>Protéger, examiner, alerter, secourir</li><li>Réaliser les gestes de premiers secours</li><li>Repérer les situations dangereuses dans l'entreprise</li></ul></div>
+      <div><h4>Programme</h4><ol><li><b>Protéger et examiner</b> Sécuriser la zone, évaluer l'état de la victime.</li><li><b>Alerter</b> Structurer et transmettre un message d'alerte efficace.</li><li><b>Secourir</b> Malaise, plaie, brûlure, hémorragie, étouffement, traumatisme.</li><li><b>Arrêt cardiaque et DAE</b> Réanimation cardio-pulmonaire, utilisation d'un défibrillateur.</li><li><b>Prévention</b> Identifier les risques dans son environnement de travail.</li></ol></div>
+    </div>
+    <p class="f-foot"><a class="btn btn-line" href="#devis" data-preset="sst" data-umami-event="devis-formation">Demander un devis pour cette formation</a></p>
+  </div>
+</details>
+<details class="f">
+  <summary>
+    <span class="f-name"><b>MAC SST : maintien et actualisation des compétences</b><small>Réactualiser ses gestes et renouveler son certificat.</small></span>
+    <span class="f-dur">7 h</span>
+    <span class="f-meta"><i>Pour qui</i>Titulaires du certificat SST</span>
+    <span class="f-meta"><i>Validation</i>Certificat SST renouvelé pour 24 mois</span>
+    <span class="f-more" aria-hidden="true"></span>
+  </summary>
+  <div class="f-body">
+    <p class="f-hook">Le recyclage obligatoire pour conserver son certificat SST à jour.</p>
+    <div class="f-cols">
+      <div><h4>Public concerné</h4><p>Titulaires du certificat SST dont la validité arrive à échéance.</p><h4>Prérequis</h4><p>Être titulaire du certificat SST.</p><h4>Objectifs</h4><ul><li>Réactualiser les gestes de premiers secours</li><li>Intégrer les évolutions réglementaires et techniques</li><li>Renouveler son certificat SST pour 24 mois</li></ul></div>
+      <div><h4>Programme</h4><ol><li><b>Révision des gestes de base</b> Protéger, examiner, alerter, secourir.</li><li><b>Mises en situation</b> Cas concrets adaptés aux risques de l'entreprise.</li><li><b>Actualisation</b> Évolutions des techniques et de la réglementation depuis la dernière session.</li></ol></div>
+    </div>
+    <p class="f-foot"><a class="btn btn-line" href="#devis" data-preset="mac" data-umami-event="devis-formation">Demander un devis pour cette formation</a></p>
+  </div>
+</details>
+  </div>
+  <p class="after"><a href="#devis" data-umami-event="cta-devis-catalogue"><b>Demander un devis pour une ou plusieurs formations</b></a></p>
+</section>
+
+<section class="wrap sec" id="avis" aria-labelledby="avis-t">
+  <div class="avis">
+    <figure class="pull">
+      <blockquote id="avis-t">« Avec l'exercice, je me sens capable d'appliquer ce que j'ai appris. »</blockquote>
+      <figcaption>Stagiaire, formation évacuation, Île-de-France, janvier 2026</figcaption>
+    </figure>
+    <div class="qs">
+      <p class="kicker gray">Extraits de fiches d'évaluation</p>
+      <div class="q"><p>« Intervenant clair et pédagogue ! Formation efficace ! »</p><span>Formation évacuation, Île-de-France, janvier 2026</span></div><div class="q"><p>« Le formateur était bien à notre écoute et répondait à nos demandes. »</p><span>Équipier de première intervention, Normandie, septembre 2026</span></div><div class="q"><p>« Très bien, évacuation avec effets pyrotechniques. »</p><span>Équipier de première intervention, Île-de-France, septembre 2026</span></div><div class="q"><p>« Piqûre de rappel (indispensable). »</p><span>Équipier de première intervention, Normandie, septembre 2026</span></div><div class="q"><p>« Quizz à faire sur le téléphone très sympa. »</p><span>Équipier de première intervention, Île-de-France, septembre 2026</span></div><div class="q"><p>« Formation très claire, merci. »</p><span>Équipier de première intervention, Île-de-France, octobre 2026</span></div>
+      <p class="src">Citations reprises mot pour mot des fiches d'évaluation, sans nom de stagiaire ni d'entreprise. Sessions dispensées notamment pour le compte de CHRONOFEU (protection incendie), en Normandie et en Île-de-France.</p>
+    </div>
   </div>
 </section>
 
-<!-- BENEFICES IMMEDIATS -->
-<section class="benefits">
-  <div class="wrap benefits-grid">
-    <div class="benefit">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <b>Formation dans vos locaux</b>
-      <span>Le formateur se déplace avec son matériel, en Normandie et en Île-de-France.</span>
-    </div>
-    <div class="benefit">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <b>Groupes à taille humaine</b>
-      <span>Jusqu'à 10 participants par session pour un vrai suivi individuel.</span>
-    </div>
-    <div class="benefit">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
-      <b>Mise en pratique systématique</b>
-      <span>Exercices réels à chaque session, avec le matériel apporté sur place.</span>
-    </div>
-    <div class="benefit">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      <b>Réponse rapide</b>
-      <span>Devis personnalisé envoyé sur simple demande, sans engagement.</span>
-    </div>
-  </div>
-</section>
-
-<!-- CHIFFRES CLES : à mettre à jour après chaque BPF / lot de fiches d'évaluation -->
-<section class="section" id="resultats" aria-labelledby="resultats-titre">
+<section class="band" id="methode">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Des résultats concrets</p>
-      <h2 id="resultats-titre">Des stagiaires qui repartent convaincus</h2>
-    </div>
-    <div class="stats-grid">
-      <div class="stat">
-        <p class="num">229</p>
-        <p class="what">stagiaires formés depuis décembre&nbsp;2025</p>
-        <p class="more">15 sessions, en Normandie et en Île-de-France</p>
-      </div>
-      <div class="stat">
-        <p class="num">678<small>&nbsp;h</small></p>
-        <p class="what">de formation suivies par les stagiaires</p>
-        <p class="more">incendie, évacuation et secourisme</p>
-      </div>
-      <div class="stat">
-        <p class="num">98&nbsp;%</p>
-        <p class="what">des notes «&nbsp;Excellent&nbsp;» ou «&nbsp;Très&nbsp;bon&nbsp;»</p>
-        <p class="more">dont 85&nbsp;% de «&nbsp;Excellent&nbsp;»</p>
-      </div>
-    </div>
-    <p class="stats-src">Sources : bilan pédagogique et financier (15 sessions, du 1er décembre 2025 au 28 septembre 2026) ; 828 notes relevées sur 17 groupes de stagiaires évalués en fin de formation, de janvier à octobre 2026.</p>
-  </div>
-</section>
-
-<!-- TEMOIGNAGES : citations reprises mot pour mot des fiches d'évaluation -->
-<section class="section" id="avis" aria-labelledby="avis-titre">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Retours de stagiaires</p>
-      <h2 id="avis-titre">Ce que disent les stagiaires</h2>
-      <p>Extraits des fiches d'évaluation remplies en fin de formation.</p>
-    </div>
-    <div class="testi-grid">
-      <figure class="testi"><blockquote>«&nbsp;Avec l'exercice, je me sens capable d'appliquer ce que j'ai appris.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Formation évacuation · Île-de-France · janvier 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Intervenant clair et pédagogue&nbsp;! Formation&nbsp;efficace&nbsp;!&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Formation évacuation · Île-de-France · janvier 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Nickel, pédagogique et embarquant.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Formation évacuation · Île-de-France · janvier 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Le formateur était bien à notre écoute et répondait à nos demandes.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Normandie · septembre 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Très bien, évacuation avec effets pyrotechniques.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Île-de-France · septembre 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Quizz à faire sur le téléphone très sympa.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Île-de-France · septembre 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Super formateur, super jeu de quizz.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Île-de-France · janvier 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Piqûre de rappel (indispensable).&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Normandie · septembre 2026</figcaption></figure>
-      <figure class="testi"><blockquote>«&nbsp;Formation très claire, merci.&nbsp;»</blockquote><figcaption><b>Stagiaire</b>Équipier de première intervention · Île-de-France · octobre 2026</figcaption></figure>
-    </div>
-    <p class="testi-src">Citations reprises mot pour mot des fiches d'évaluation, sans nom de stagiaire ni d'entreprise. Sessions dispensées pour le compte de CHRONOFEU.</p>
-    <!-- A REACTIVER seulement avec l'accord écrit des clients pour afficher leur logo
-    <div class="logos-row">
-      <div class="logo-ph">[Logo client]</div>
-      <div class="logo-ph">[Logo client]</div>
-      <div class="logo-ph">[Logo client]</div>
-      <div class="logo-ph">[Logo client]</div>
-    </div>
-    -->
-  </div>
-</section>
-
-<!-- EXPERIENCE TERRAIN -->
-<section class="section">
-  <div class="wrap">
-    <div class="exp">
-      <div class="exp-text">
-        <p class="eyebrow">Notre approche</p>
-        <h2>Des formations animées par un professionnel du terrain</h2>
-        <p>Chez Teranga M&J Formation, la sécurité s'apprend en pratiquant.</p>
-        <p>Les formations sont basées sur des situations concrètes, des exercices pratiques et une pédagogie permettant aux stagiaires de comprendre ce qu'ils devront réellement faire en situation d'urgence.</p>
-        <div class="exp-note">Formateur intervenant notamment pour CHRONOFEU (protection incendie), avec des sessions dispensées auprès d'enseignes et d'établissements en Normandie et en Île-de-France, évaluées "excellent" par les stagiaires sur l'accueil, la pédagogie et l'atteinte des objectifs.</div>
-      </div>
-      <!-- A REACTIVER quand la photo est disponible (remettre aussi .exp en 2 colonnes dans le CSS)
-      <div class="exp-visual">[Photo à intégrer : le formateur en situation de formation]</div>
-      -->
-    </div>
-  </div>
-</section>
-
-<!-- FORMATIONS (cartes synthétiques + détail) -->
-<section class="section alt" id="formations">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Nos formations</p>
-      <h2>Cinq formations pour couvrir vos obligations</h2>
-      <p>Sélectionnez une formation pour afficher son programme complet, le public concerné, les prérequis et les modalités de validation.</p>
-    </div>
-
-    <div class="tiles">
-      <button class="tile active" data-accent="fire" data-panel="extincteur">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="17" y="15" width="13" height="25" rx="4"/><rect x="20" y="7" width="7" height="8" rx="1.5"/><line x1="23.5" y1="7" x2="23.5" y2="3"/><line x1="20" y1="3" x2="27" y2="3"/><path d="M30 17c6-2 10 1 10 7"/><path d="M40 24l4-1.5M40 24l4 1M40 24l4.5 3"/>
-        </svg>
-        <p class="name">Manipulation d'extincteur</p>
-        <span class="duree">1h · sensibilisation</span>
-        <p class="benefit-line">Reconnaître un départ de feu et réagir avec le bon geste.</p>
-        <span class="cta-row">Voir le programme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></span>
-      </button>
-
-      <button class="tile" data-accent="fire" data-panel="epi">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M24 5c-8 10-11 16-11 22a11 11 0 0 0 22 0c0-3-2-4-3-2-1 3-3 3-3 0 0-4-5-6-5-14z" stroke-linejoin="round"/>
-        </svg>
-        <p class="name">Équipier de Première Intervention</p>
-        <span class="duree">3h30 · EPI</span>
-        <p class="benefit-line">Intervenir dans les premières minutes, avant les secours.</p>
-        <span class="cta-row">Voir le programme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></span>
-      </button>
-
-      <button class="tile" data-accent="orange" data-panel="evacuation">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="7" y="7" width="15" height="34" rx="1.5"/><circle cx="18.5" cy="24" r="1.4" fill="currentColor" stroke="none"/><path d="M27 24h15"/><path d="M36 18l6 6-6 6"/>
-        </svg>
-        <p class="name">Formation à l'évacuation</p>
-        <span class="duree">3h · guide-file / serre-file</span>
-        <p class="benefit-line">Organiser une évacuation rapide, ordonnée et complète.</p>
-        <span class="cta-row">Voir le programme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></span>
-      </button>
-
-      <button class="tile" data-accent="steel" data-panel="sst">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="24" cy="24" r="18"/><line x1="24" y1="14" x2="24" y2="34"/><line x1="14" y1="24" x2="34" y2="24"/>
-        </svg>
-        <p class="name">SST : Sauveteur Secouriste du Travail</p>
-        <span class="duree">14h · initial</span>
-        <p class="benefit-line">Protéger, alerter, secourir face à un accident du travail.</p>
-        <span class="cta-row">Voir le programme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></span>
-      </button>
-
-      <button class="tile" data-accent="steel" data-panel="mac">
-        <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M36 16a15 15 0 1 0 3 12"/><path d="M39 8v9h-9"/>
-        </svg>
-        <p class="name">MAC SST (recyclage)</p>
-        <span class="duree">7h · maintien des compétences</span>
-        <p class="benefit-line">Réactualiser ses compétences et renouveler son certificat.</p>
-        <span class="cta-row">Voir le programme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 6 15 12 9 18"/></svg></span>
-      </button>
-    </div>
-
-    <div class="fiche-wrap">
-      <!-- FICHE 1 : Manipulation extincteur -->
-      <div class="panel active" id="panel-extincteur">
-        <div class="fiche">
-          <div class="fiche-head">
-            <div>
-              <h3>Manipulation d'extincteur</h3>
-              <p class="hook">Une session courte pour apprendre à reconnaître un départ de feu et à agir avec le bon extincteur, dans le bon geste.</p>
-            </div>
-            <div class="fiche-meta">
-              <div><b>1h</b>Durée</div>
-              <div><b>10 pers.</b>Effectif max.</div>
-              <div><b>Sur site</b>Lieu</div>
-            </div>
-          </div>
-          <div class="fiche-body">
-            <div class="col-left">
-              <div class="block"><h4>Public concerné</h4><p>Tout salarié souhaitant s'initier à la lutte contre l'incendie, y compris hors désignation officielle.</p></div>
-              <div class="block"><h4>Prérequis</h4><p>Aucun.</p></div>
-              <div class="block"><h4>Objectifs</h4><ul><li>Identifier les classes de feu (A à F)</li><li>Choisir l'agent extincteur adapté</li><li>Utiliser un extincteur en sécurité</li></ul></div>
-            </div>
-            <div class="col-right">
-              <div class="block"><h4>Programme</h4>
-                <ol class="programme">
-                  <li><b>Le triangle du feu</b>Comprendre comment un feu naît et se propage.</li>
-                  <li><b>Les classes de feu</b>Reconnaître un feu A, B, C, D ou F et l'agent extincteur qui lui correspond.</li>
-                  <li><b>Les types d'extincteurs</b>Eau pulvérisée, CO₂ : usages, limites, entretien.</li>
-                  <li><b>Mise en pratique</b>Manipulation d'un extincteur sur générateur de flammes écologique.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="fiche-foot">
-            <span class="valid"><b>Validation :</b> attestation de formation individuelle</span>
-            <a href="mailto:terangamj@gmail.com?subject=Demande%20de%20devis%20-%20Manipulation%20d%27extincteur" data-umami-event="devis-formation" class="btn btn-primary">Demander un devis</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FICHE 2 : EPI -->
-      <div class="panel" id="panel-epi">
-        <div class="fiche">
-          <div class="fiche-head">
-            <div>
-              <h3>Équipier de Première Intervention</h3>
-              <p class="hook">Forme les salariés désignés EPI à intervenir dans les premières minutes d'un départ de feu, avant l'arrivée des secours.</p>
-            </div>
-            <div class="fiche-meta">
-              <div><b>3h30</b>Durée</div>
-              <div><b>10 pers.</b>Effectif max.</div>
-              <div><b>Sur site</b>Lieu</div>
-            </div>
-          </div>
-          <div class="fiche-body">
-            <div class="col-left">
-              <div class="block"><h4>Public concerné</h4><p>Personnel désigné équipier de première intervention (EPI/ESI) dans l'organisation incendie de l'établissement.</p></div>
-              <div class="block"><h4>Prérequis</h4><p>Aucun.</p></div>
-              <div class="block"><h4>Objectifs</h4><ul><li>Connaître son rôle dans le plan d'organisation incendie</li><li>Donner l'alerte selon la procédure interne</li><li>Utiliser les moyens de première intervention (extincteurs, RIA)</li><li>Agir en sécurité face à un feu réel</li></ul></div>
-            </div>
-            <div class="col-right">
-              <div class="block"><h4>Programme</h4>
-                <ol class="programme">
-                  <li><b>Cadre réglementaire</b>Rôle de l'EPI, obligations de l'employeur (Code du travail, art. R.4227-28, R.4227-38, R.4227-39).</li>
-                  <li><b>Naissance et propagation du feu</b>Triangle du feu, classes de feu, comportement des fumées.</li>
-                  <li><b>Moyens de première intervention</b>Extincteurs et robinets d'incendie armés (RIA) : fonctionnement, usage, limites.</li>
-                  <li><b>Alerte et consignes</b>Donner l'alerte, guider les secours, articulation avec l'évacuation.</li>
-                  <li><b>Pratique sur feux réels</b>Extinction de plusieurs types de feux en conditions encadrées.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="fiche-foot">
-            <span class="valid"><b>Validation :</b> attestation de formation individuelle</span>
-            <a href="mailto:terangamj@gmail.com?subject=Demande%20de%20devis%20-%20Equipier%20de%20Premiere%20Intervention" data-umami-event="devis-formation" class="btn btn-primary">Demander un devis</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FICHE 3 : Évacuation -->
-      <div class="panel" id="panel-evacuation">
-        <div class="fiche">
-          <div class="fiche-head">
-            <div>
-              <h3>Formation à l'évacuation</h3>
-              <p class="hook">Prépare les guides-file et serre-file à organiser une évacuation rapide, ordonnée et complète.</p>
-            </div>
-            <div class="fiche-meta">
-              <div><b>3h</b>Durée</div>
-              <div><b>10 pers.</b>Effectif max.</div>
-              <div><b>Sur site</b>Lieu</div>
-            </div>
-          </div>
-          <div class="fiche-body">
-            <div class="col-left">
-              <div class="block"><h4>Public concerné</h4><p>Salariés désignés guide-file ou serre-file, membres du service de sécurité incendie de l'établissement.</p></div>
-              <div class="block"><h4>Prérequis</h4><p>Aucun.</p></div>
-              <div class="block"><h4>Objectifs</h4><ul><li>Connaître les missions du guide-file et du serre-file</li><li>Organiser le cheminement vers les points de rassemblement</li><li>Vérifier l'évacuation complète d'une zone</li><li>Prendre en compte les personnes en situation de handicap</li></ul></div>
-            </div>
-            <div class="col-right">
-              <div class="block"><h4>Programme</h4>
-                <ol class="programme">
-                  <li><b>Cadre réglementaire</b>Obligations liées à l'évacuation, rôle de chacun dans le dispositif.</li>
-                  <li><b>Missions du guide-file et du serre-file</b>Répartition des rôles, vérification des zones, gestion des personnes en difficulté.</li>
-                  <li><b>Cheminement et points de rassemblement</b>Lecture des plans d'évacuation, itinéraires, issues de secours.</li>
-                  <li><b>Exercice pratique</b>Évacuation simulée sur site, chronométrée.</li>
-                  <li><b>Retour d'expérience</b>Analyse de l'exercice, axes d'amélioration.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="fiche-foot">
-            <span class="valid"><b>Validation :</b> attestation de formation individuelle</span>
-            <a href="mailto:terangamj@gmail.com?subject=Demande%20de%20devis%20-%20Formation%20a%20l%27evacuation" data-umami-event="devis-formation" class="btn btn-primary">Demander un devis</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FICHE 4 : SST -->
-      <div class="panel" id="panel-sst">
-        <div class="fiche">
-          <div class="fiche-head">
-            <div>
-              <h3>SST : Sauveteur Secouriste du Travail</h3>
-              <p class="hook">La formation initiale de secourisme en entreprise, conforme au référentiel national SST.</p>
-            </div>
-            <div class="fiche-meta">
-              <div><b>14h</b>Durée</div>
-              <div><b>10 pers.</b>Effectif max.</div>
-              <div><b>Sur site</b>Lieu</div>
-            </div>
-          </div>
-          <div class="fiche-body">
-            <div class="col-left">
-              <div class="block"><h4>Public concerné</h4><p>Tout salarié, avec ou sans mission de secours désignée dans l'entreprise.</p></div>
-              <div class="block"><h4>Prérequis</h4><p>Aucun.</p></div>
-              <div class="block"><h4>Objectifs</h4><ul><li>Protéger, examiner, alerter, secourir</li><li>Réaliser les gestes de premiers secours</li><li>Repérer les situations dangereuses dans l'entreprise</li></ul></div>
-            </div>
-            <div class="col-right">
-              <div class="block"><h4>Programme</h4>
-                <ol class="programme">
-                  <li><b>Protéger et examiner</b>Sécuriser la zone, évaluer l'état de la victime.</li>
-                  <li><b>Alerter</b>Structurer et transmettre un message d'alerte efficace.</li>
-                  <li><b>Secourir</b>Malaise, plaie, brûlure, hémorragie, étouffement, traumatisme.</li>
-                  <li><b>Arrêt cardiaque et DAE</b>Réanimation cardio-pulmonaire, utilisation d'un défibrillateur.</li>
-                  <li><b>Prévention</b>Identifier les risques dans son environnement de travail.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="fiche-foot">
-            <span class="valid"><b>Validation :</b> certificat SST, valable 24 mois</span>
-            <a href="mailto:terangamj@gmail.com?subject=Demande%20de%20devis%20-%20SST%20-%20Sauveteur%20Secouriste%20du%20Travail" data-umami-event="devis-formation" class="btn btn-primary">Demander un devis</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- FICHE 5 : MAC SST -->
-      <div class="panel" id="panel-mac">
-        <div class="fiche">
-          <div class="fiche-head">
-            <div>
-              <h3>MAC SST : maintien et actualisation des compétences</h3>
-              <p class="hook">Le recyclage obligatoire pour conserver son certificat SST à jour.</p>
-            </div>
-            <div class="fiche-meta">
-              <div><b>7h</b>Durée</div>
-              <div><b>10 pers.</b>Effectif max.</div>
-              <div><b>Sur site</b>Lieu</div>
-            </div>
-          </div>
-          <div class="fiche-body">
-            <div class="col-left">
-              <div class="block"><h4>Public concerné</h4><p>Titulaires du certificat SST dont la validité arrive à échéance.</p></div>
-              <div class="block"><h4>Prérequis</h4><p>Être titulaire du certificat SST.</p></div>
-              <div class="block"><h4>Objectifs</h4><ul><li>Réactualiser les gestes de premiers secours</li><li>Intégrer les évolutions réglementaires et techniques</li><li>Renouveler son certificat SST pour 24 mois</li></ul></div>
-            </div>
-            <div class="col-right">
-              <div class="block"><h4>Programme</h4>
-                <ol class="programme">
-                  <li><b>Révision des gestes de base</b>Protéger, examiner, alerter, secourir.</li>
-                  <li><b>Mises en situation</b>Cas concrets adaptés aux risques de l'entreprise.</li>
-                  <li><b>Actualisation</b>Évolutions des techniques et de la réglementation depuis la dernière session.</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-          <div class="fiche-foot">
-            <span class="valid"><b>Validation :</b> certificat SST renouvelé pour 24 mois</span>
-            <a href="mailto:terangamj@gmail.com?subject=Demande%20de%20devis%20-%20MAC%20SST" data-umami-event="devis-formation" class="btn btn-primary">Demander un devis</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXERCICES PRATIQUES -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Pédagogie</p>
-      <h2>Apprendre en faisant</h2>
-      <p>Chaque formation inclut une mise en situation réelle : manipulation d'extincteur sur générateur de flammes écologique, exercice d'évacuation chronométré, gestes de premiers secours en situation concrète. Vos collaborateurs repartent avec des gestes déjà répétés.</p>
-    </div>
-    <!-- A REACTIVER quand les 3 photos sont disponibles (extincteur, évacuation, générateur de flammes)
-    <div class="practice-grid">
-      <div class="photo-ph">[Photo à intégrer : manipulation d'extincteur]</div>
-      <div class="photo-ph">[Photo à intégrer : exercice d'évacuation]</div>
-      <div class="photo-ph">[Photo à intégrer : générateur de flammes]</div>
-    </div>
-    -->
-  </div>
-</section>
-
-<!-- BLOC PROBLEME -->
-<section class="section alt">
-  <div class="wrap">
-    <div class="problem">
-      <h2>Votre entreprise est-elle réellement prête ?</h2>
-      <ul class="problem-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos salariés savent-ils quel extincteur utiliser ?</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos guides-file et serre-file connaissent-ils réellement leur rôle ?</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos collaborateurs sauraient-ils réagir face à un accident ?</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Vos équipes connaissent-elles les procédures à appliquer en situation d'urgence ?</li>
-      </ul>
-      <a href="#devis" class="btn btn-primary" data-umami-event="cta-devis-probleme">Faire le point sur mes besoins</a>
-    </div>
-  </div>
-</section>
-
-<!-- ADAPTATION AUX ETABLISSEMENTS -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Pour chaque activité</p>
-      <h2>Des formations adaptées à votre activité</h2>
-      <p>Chaque établissement a ses propres contraintes. Les formations sont ajustées à votre activité et à votre effectif.</p>
-    </div>
-    <div class="segments">
-      <div class="segment"><b>PME & TPE</b><span>Des sessions courtes, sans perturber votre activité.</span></div>
-      <div class="segment"><b>Collectivités</b><span>Conformité aux obligations réglementaires des bâtiments publics.</span></div>
-      <div class="segment"><b>Établissements recevant du public</b><span>Adaptation à votre catégorie ERP et à l'effectif public accueilli.</span></div>
-      <div class="segment"><b>Commerces</b><span>Formation organisée entre deux services, sur vos horaires.</span></div>
-      <div class="segment"><b>Établissements de santé</b><span>Prise en compte des contraintes liées aux patients et résidents.</span></div>
-      <div class="segment"><b>Entreprises industrielles</b><span>Formation adaptée aux risques spécifiques de votre site.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FONCTIONNEMENT 4 ETAPES -->
-<section class="section alt">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Simple et rapide</p>
-      <h2>Comment ça se passe</h2>
-    </div>
+    <p class="kicker">Déroulement</p>
+    <h2>De la demande de devis à l'attestation</h2>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><b>Vous demandez un devis</b><span>Formulaire en ligne ou appel direct.</span></div>
-      <div class="step"><div class="step-num">2</div><b>On échange sur vos besoins</b><span>Effectif, activité, contraintes de planning.</span></div>
-      <div class="step"><div class="step-num">3</div><b>La formation a lieu dans vos locaux</b><span>À la date convenue, en groupe à taille humaine.</span></div>
-      <div class="step"><div class="step-num">4</div><b>Vos équipes repartent formées</b><span>Attestation ou certificat remis à l'issue de la session.</span></div>
+      <div><p class="sn">1</p><h3>Vous demandez un devis</h3><p>Par le formulaire ou par téléphone.</p></div>
+      <div><p class="sn">2</p><h3>On échange sur vos besoins</h3><p>Effectif, activité, contraintes de planning.</p></div>
+      <div><p class="sn">3</p><h3>La formation a lieu chez vous</h3><p>À la date convenue, en groupe à taille humaine.</p></div>
+      <div><p class="sn">4</p><h3>Vos équipes repartent formées</h3><p>Attestation ou certificat remis à l'issue de la session.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ZONE GEOGRAPHIQUE -->
-<section class="section alt">
-  <div class="wrap">
-    <div class="zone-wrap">
-      <div>
-        <p class="eyebrow">Zone d'intervention</p>
-        <h2>Formation incendie et SST dans l'Eure et en Normandie</h2>
-        <ul class="zone-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Évreux</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Eure</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Normandie</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Île-de-France (selon disponibilités)</li>
-        </ul>
-        <p class="zone-cities">Le formateur se déplace avec son matériel à Évreux, Louviers, Vernon, Les Andelys, Bernay, Pont-Audemer, Rouen, Le Havre et Caen. En Île-de-France, dans le Val-d'Oise, les Yvelines et les départements voisins, selon disponibilités.</p>
-      </div>
-      <div class="radar">
-        <svg viewBox="0 0 220 220">
-          <circle cx="110" cy="110" r="100" fill="none" stroke="#d8d0c0" stroke-width="1.5"/>
-          <circle cx="110" cy="110" r="68" fill="none" stroke="#d8d0c0" stroke-width="1.5"/>
-          <circle cx="110" cy="110" r="36" fill="none" stroke="#d8d0c0" stroke-width="1.5"/>
-          <circle cx="110" cy="110" r="6" fill="#C4281D"/>
-          <text x="110" y="145" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="11" fill="#8b8478">Évreux</text>
-        </svg>
-      </div>
-    </div>
+<section class="wrap sec two" id="zone">
+  <div>
+    <h2>Apprendre en faisant</h2>
+    <p>Chaque formation comprend une mise en situation : manipulation d'extincteur sur générateur de flammes écologique, exercice d'évacuation chronométré, gestes de premiers secours sur cas concrets.</p>
+    <p>Les stagiaires repartent avec des gestes déjà répétés, pas seulement un support de cours.</p>
+    <h3 class="gray-t">Pour quels établissements</h3>
+    <p>TPE et PME, collectivités, établissements recevant du public, commerces, établissements de santé, sites industriels. Le programme est ajusté à votre activité, à votre catégorie ERP et à votre effectif.</p>
+  </div>
+  <div>
+    <h2>Zone d'intervention</h2>
+    <p class="zone-h">Formation incendie et SST dans l'Eure et en Normandie</p>
+    <p>Le formateur se déplace avec son matériel à Évreux, Louviers, Vernon, Les Andelys, Bernay, Pont-Audemer, Rouen, Le Havre et Caen. En Île-de-France, dans le Val-d'Oise, les Yvelines et les départements voisins, selon disponibilités.</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Questions fréquentes</p>
-      <h2>FAQ</h2>
-    </div>
-    <div class="faq-list">
-      <details open>
-        <summary>Faut-il un nombre minimum de participants ?</summary>
-        <p>Non, les sessions s'adaptent à votre effectif, jusqu'à 10 participants par groupe pour garder un vrai suivi individuel.</p>
-      </details>
-      <details>
-        <summary>Où se déroule la formation ?</summary>
-        <p>Directement dans vos locaux, à Évreux, dans l'Eure, en Normandie ou en Île-de-France. Le matériel est apporté sur place.</p>
-      </details>
-      <details>
-        <summary>Combien de temps dure chaque formation ?</summary>
-        <p>Manipulation d'extincteur : 1 h. Formation à l'évacuation : 3 h. Équipier de Première Intervention : 3 h 30. MAC SST : 7 h. SST : 14 h.</p>
-      </details>
-      <details>
-        <summary>Comment est établi le tarif ?</summary>
-        <p>Chaque devis est établi selon la formation, le nombre de participants et le lieu. Il précise les frais de déplacement éventuels. TVA non applicable, article 261-4-4° du CGI.</p>
-      </details>
-      <details>
-        <summary>Les formations sont-elles finançables par un OPCO ?</summary>
-        <p>TERANGA M&amp;J FORMATION n'est pas certifié Qualiopi à ce jour : les formations sont donc facturées directement à l'entreprise, sans prise en charge OPCO.</p>
-      </details>
-      <details>
-        <summary>Quelle attestation est délivrée à l'issue de la formation ?</summary>
-        <p>Une attestation de formation individuelle pour l'extincteur, l'EPI et l'évacuation, ou un certificat SST valable 24 mois pour le SST et le MAC SST.</p>
-      </details>
-      <details>
-        <summary>Intervenez-vous en dehors de la Normandie ?</summary>
-        <p>Les interventions ont lieu principalement en Normandie, avec possibilité de déplacement en Île-de-France selon les disponibilités.</p>
-      </details>
-    </div>
-  </div>
+<section class="wrap faq" id="faq">
+  <h2>Questions fréquentes</h2>
+  <div class="faq-list"><details><summary>Faut-il un nombre minimum de participants ?</summary><p>Non, les sessions s'adaptent à votre effectif, jusqu'à 10 participants par groupe pour garder un vrai suivi individuel.</p></details><details><summary>Où se déroule la formation ?</summary><p>Directement dans vos locaux, à Évreux, dans l'Eure, en Normandie ou en Île-de-France. Le matériel est apporté sur place.</p></details><details><summary>Combien de temps dure chaque formation ?</summary><p>Manipulation d'extincteur : 1 h. Formation à l'évacuation : 3 h. Équipier de Première Intervention : 3 h 30. MAC SST : 7 h. SST : 14 h.</p></details><details><summary>Comment est établi le tarif ?</summary><p>Chaque devis est établi selon la formation, le nombre de participants et le lieu. Il précise les frais de déplacement éventuels. TVA non applicable, article 261-4-4° du CGI.</p></details><details><summary>Les formations sont-elles finançables par un OPCO ?</summary><p>TERANGA M&amp;J FORMATION n'est pas certifié Qualiopi à ce jour : les formations sont donc facturées directement à l'entreprise, sans prise en charge OPCO.</p></details><details><summary>Quelle attestation est délivrée à l'issue de la formation ?</summary><p>Une attestation de formation individuelle pour l'extincteur, l'EPI et l'évacuation, ou un certificat SST valable 24 mois pour le SST et le MAC SST.</p></details><details><summary>Intervenez-vous en dehors de la Normandie ?</summary><p>Les interventions ont lieu principalement en Normandie, avec possibilité de déplacement en Île-de-France selon les disponibilités.</p></details></div>
 </section>
 
-<!-- FORMULAIRE DEVIS -->
-<section class="section alt" id="devis">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Demande de devis</p>
-      <h2>Recevoir un devis personnalisé</h2>
-      <p>Quelques informations suffisent : vous recevez une réponse personnalisée par e-mail ou par téléphone, sans engagement.</p>
+<section class="devis" id="devis">
+  <div class="wrap dv">
+    <div>
+      <h2>Recevoir un devis</h2>
+      <p class="dv-l">Quelques informations suffisent. Vous recevez une réponse personnalisée par e-mail ou par téléphone, sans engagement.</p>
+      <p class="dv-c">Vous préférez parler ?<br><a href="tel:+33668894338" data-umami-event="appel">06 68 89 43 38</a><br><a href="mailto:terangamj@gmail.com">terangamj@gmail.com</a></p>
     </div>
-
     <div class="form-shell">
       <form id="devis-form">
         <div class="form-grid">
@@ -1047,30 +578,20 @@
           <label for="f-consent">J'accepte que ces informations soient utilisées pour me recontacter concernant ma demande de devis.</label>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block" id="f-submit">RECEVOIR MON DEVIS</button>
+        <button type="submit" class="btn btn-primary btn-block" id="f-submit">Recevoir mon devis</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 
         <p class="form-note" id="note-mailto">Les informations recueillies via ce formulaire sont utilisées uniquement pour répondre à votre demande de devis. Elles ne sont ni conservées au-delà du traitement de votre demande, ni transmises à des tiers. En cliquant sur « Recevoir mon devis », votre messagerie s'ouvre avec un e-mail pré-rempli à envoyer directement à terangamj@gmail.com.</p>
         <p class="form-note" id="note-service" hidden>Les informations saisies sont transmises par le service Formspree, qui les achemine par e-mail à TERANGA M&amp;J FORMATION. Elles sont utilisées uniquement pour répondre à votre demande de devis, puis conservées le temps nécessaire à la relation commerciale.</p>
       </form>
-    </div>
   </div>
 </section>
+</main>
 
-<!-- FOOTER -->
 <footer id="contact">
-  <div class="wrap">
-    <div class="col">
-      <h5>TERANGA M&J FORMATION</h5>
-      <p>Évreux (27), intervention en Normandie et en Île-de-France</p>
-      <p><a href="mailto:terangamj@gmail.com">terangamj@gmail.com</a></p>
-      <p><a href="tel:+33668894338" data-umami-event="appel">06 68 89 43 38</a></p>
-    </div>
-    <div class="col legal">
-      <h5>Mentions</h5>
-      <p>Organisme de formation déclaré sous le numéro 28270308227. TVA non applicable, article 261-4-4° du Code général des impôts. Devis sur demande, hors frais de déplacement.</p>
-      <p><a href="#mentions-legales" style="text-decoration:underline;">Mentions légales</a></p>
-    </div>
+  <div class="wrap foot">
+    <p><b>Teranga M&amp;J Formation</b><br>Évreux (27), intervention en Normandie et en Île-de-France<br><a href="mailto:terangamj@gmail.com">terangamj@gmail.com</a> · <a href="tel:+33668894338" data-umami-event="appel">06 68 89 43 38</a></p>
+    <p>Organisme de formation déclaré sous le numéro 28270308227. TVA non applicable, article 261-4-4° du Code général des impôts. Devis sur demande, hors frais de déplacement.<br><a href="#mentions-legales">Mentions légales</a></p>
   </div>
 </footer>
 
@@ -1106,33 +627,16 @@
   </div>
 </section>
 
-<!-- STICKY MOBILE BAR -->
 <div class="sticky-bar">
-  <a class="call" href="tel:+33668894338" data-umami-event="appel">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.5 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
-    Appeler
-  </a>
-  <a class="quote" href="#devis" data-umami-event="cta-devis-mobile">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-    Devis
-  </a>
+  <a class="call" href="tel:+33668894338" data-umami-event="appel">Appeler</a>
+  <a class="quote" href="#devis" data-umami-event="cta-devis-mobile">Devis</a>
 </div>
 
 <script>
-  // Sélecteur de formations
-  const tiles = document.querySelectorAll('.tile');
-  const panels = document.querySelectorAll('.panel');
-  tiles.forEach(tile => {
-    tile.addEventListener('click', () => {
-      tiles.forEach(t => t.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      tile.classList.add('active');
-      const target = document.getElementById('panel-' + tile.dataset.panel);
-      target.classList.add('active');
-      if (window.innerWidth < 900) {
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
+  // Bouton "Demander un devis pour cette formation" : présélectionne la formation dans le formulaire
+  const presetMap = {extincteur:'Extincteurs', epi:'EPI', evacuation:'Évacuation', sst:'SST', mac:'MAC SST'};
+  document.querySelectorAll('[data-preset]').forEach(a => {
+    a.addEventListener('click', () => { const sel = document.getElementById('f-formation'); if (sel) sel.value = presetMap[a.dataset.preset] || sel.value; });
   });
 
   // ---- Réglages à compléter ----
@@ -1196,6 +700,5 @@
     });
   });
 </script>
-
 </body>
 </html>
