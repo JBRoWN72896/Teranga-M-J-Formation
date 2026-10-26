@@ -334,6 +334,8 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
 .consent input{margin-top:4px;width:18px;height:18px;flex:0 0 auto}
 .form-status{margin:12px 0 0;font-size:15px}
 .form-status.err{color:#a90d19;font-weight:600}
+.form-info{margin:18px 0 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--panel);font-size:14px;line-height:1.5}
+.form-info a{color:inherit}
 .form-note{margin:14px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
 .form-ok{padding:20px 0;font-size:18px}
 .form-ok b{display:block;font-family:var(--serif);font-size:26px;margin-bottom:6px}
@@ -384,6 +386,17 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
   :root{--muted:#2c3640;--rule:#6d7780}
   .field input,.field select,.field textarea{border-color:var(--ink)}
 }
+
+.cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;max-width:760px;margin:0 auto;background:#fff;color:var(--ink);border:2px solid var(--ink);padding:16px 18px;box-shadow:0 6px 24px rgba(21,32,43,.18)}
+.cb[hidden]{display:none}
+.cb p{margin:0 0 12px;font-size:15px;line-height:1.5}
+.cb a{color:inherit}
+.cb-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cb-actions button{flex:1;min-width:130px;font:inherit;font-weight:700;font-size:16px;padding:12px 16px;cursor:pointer;background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.cb-actions button:hover{background:var(--panel)}
+.cb-actions button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:760px){.cb{bottom:64px}}
 @media print{.top,.sticky-bar{display:none}.js [data-reveal]{opacity:1;transform:none}}
 
 </style>
@@ -534,7 +547,7 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
     <div class="qs">
       <p class="kicker gray">Extraits de fiches d'évaluation</p>
       <div class="q"><p>« Intervenant clair et pédagogue ! Formation efficace ! »</p><span>Formation évacuation, Île-de-France, janvier 2026</span></div><div class="q"><p>« Le formateur était bien à notre écoute et répondait à nos demandes. »</p><span>Équipier de première intervention, Normandie, septembre 2026</span></div><div class="q"><p>« Très bien, évacuation avec effets pyrotechniques. »</p><span>Équipier de première intervention, Île-de-France, septembre 2026</span></div><div class="q"><p>« Formation très intéressante et assez vivante. »</p><span>Équipier de première intervention, Île-de-France, octobre 2026</span></div><div class="q"><p>« Cette formation est la plus complète et intéressante de celles réalisées auparavant. Formateur très pédagogique. »</p><span>Équipier de première intervention, Île-de-France, octobre 2026</span></div><div class="q"><p>« Quizz à faire sur le téléphone très sympa. »</p><span>Équipier de première intervention, Île-de-France, septembre 2026</span></div>
-      <p class="src">Sessions dispensées notamment pour le compte de différents organismes de formation (incendie et secourisme), en Normandie et en Île-de-France.</p>
+      <p class="src">Avis relevés sur les fiches d'évaluation de fin de formation et reproduits mot pour mot, sans nom de stagiaire ni d'entreprise. Sessions dispensées notamment pour le compte de différents organismes de formation (incendie et secourisme), en Normandie et en Île-de-France.</p>
     </div>
   </div>
 </section>
@@ -603,6 +616,8 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
         </div>
         <div class="hp" aria-hidden="true"><label for="f-gotcha">Ne pas remplir</label><input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></div>
 
+        <p class="form-info" id="form-info" hidden><b>Vos données.</b> Elles sont transmises via Formspree (société américaine, donc hors Union européenne), puis par e-mail à TERANGA M&amp;J FORMATION, uniquement pour répondre à votre demande de devis. Conservation 3 ans. <a href="#mentions-legales">Vos droits et détails</a></p>
+
         <div class="consent">
           <input type="checkbox" id="f-consent" required>
           <label for="f-consent">J'accepte que ces informations soient utilisées pour me recontacter concernant ma demande de devis.</label>
@@ -621,7 +636,7 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
 <footer id="contact">
   <div class="wrap foot">
     <p><b>Teranga M&amp;J Formation</b><br>Évreux (27), intervention en Normandie et en Île-de-France<br><a href="mailto:terangamj@gmail.com">terangamj@gmail.com</a> · <a href="tel:+33668894338" data-umami-event="appel">06 68 89 43 38</a></p>
-    <p>Organisme de formation déclaré sous le numéro 28270308227. TVA non applicable, article 261-4-4° du Code général des impôts. Devis sur demande, hors frais de déplacement.<br><a href="#mentions-legales">Mentions légales</a></p>
+    <p>Organisme de formation déclaré sous le numéro 28270308227. TVA non applicable, article 261-4-4° du Code général des impôts. Devis sur demande, hors frais de déplacement.<br><a href="#mentions-legales">Mentions légales</a><span id="manage-audience-w"> · <button type="button" class="linkbtn" id="manage-audience" hidden>Mesure d'audience : modifier mon choix</button></span></p>
   </div>
 </footer>
 
@@ -648,10 +663,10 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
         <h6>Propriété intellectuelle</h6>
         <p>L'ensemble des contenus de ce site (textes, logo, mise en page) est la propriété de TERANGA M&J FORMATION, sauf mention contraire. Toute reproduction sans autorisation est interdite.</p>
         <h6>Données personnelles</h6>
-        <p>Ce site ne comporte pas de suivi publicitaire ni de dépôt de cookies. Les polices de caractères sont hébergées sur ce site : aucune requête n'est envoyée à Google.</p>
+        <p>Ce site ne comporte pas de suivi publicitaire. Les polices de caractères sont hébergées sur ce site : aucune requête n'est envoyée à Google.</p>
         <p id="legal-mailto">Le formulaire de devis ouvre votre messagerie personnelle : les informations saisies transitent uniquement par votre e-mail, elles ne sont pas stockées sur ce site.</p>
-        <p id="legal-service" hidden>Le formulaire de devis transmet les informations saisies via le service Formspree (Formspree, Inc., États-Unis), qui les achemine par e-mail à l'éditeur. Elles sont utilisées uniquement pour répondre à votre demande. Elles sont conservées 3 ans après le dernier échange. Base légale : votre consentement et l'exécution de mesures précontractuelles. Vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression : terangamj@gmail.com. Vous pouvez aussi saisir la CNIL (cnil.fr).</p>
-        <p id="legal-umami" hidden>La fréquentation du site est mesurée avec Umami, un outil statistique sans cookie qui ne collecte pas de données permettant de vous identifier.</p>
+        <p id="legal-service" hidden>Le formulaire de devis transmet les informations saisies via le service Formspree (Formspree, Inc., États-Unis), qui les achemine par e-mail à l'éditeur. Elles sont utilisées uniquement pour répondre à votre demande. Formspree étant établi aux États-Unis, ce service implique un transfert de données hors de l'Union européenne. Elles sont conservées 3 ans après le dernier échange. Base légale : votre consentement et l'exécution de mesures précontractuelles. Vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression : terangamj@gmail.com. Vous pouvez aussi saisir la CNIL (cnil.fr).</p>
+        <p id="legal-umami" hidden>La fréquentation du site (pages vues, clics sur les boutons) est mesurée avec Umami (Umami Software, Inc., États-Unis), un outil statistique qui ne dépose pas de cookie. Il n'est activé qu'avec votre accord, recueilli par le bandeau affiché à votre première visite. Vous pouvez refuser, ou modifier votre choix à tout moment avec le lien « Mesure d'audience » en bas de page. Sans accord, aucune donnée n'est envoyée à Umami. Le choix est mémorisé dans votre navigateur.</p>
       </div>
     </div>
   </div>
@@ -660,6 +675,11 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
 <div class="sticky-bar">
   <a class="call" href="tel:+33668894338" data-umami-event="appel">Appeler</a>
   <a class="quote" href="#devis" data-umami-event="cta-devis-mobile">Devis</a>
+</div>
+
+<div class="cb" id="cb" role="dialog" aria-label="Mesure d'audience" hidden>
+  <p>Ce site utilise Umami pour mesurer sa fréquentation (pages vues, clics sur les boutons). Cet outil, hébergé hors de France, ne dépose aucun cookie. Il n'est activé que si vous l'acceptez. <a href="#mentions-legales">En savoir plus</a></p>
+  <div class="cb-actions"><button type="button" id="cb-no">Refuser</button><button type="button" id="cb-yes">Accepter</button></div>
 </div>
 
 <script>
@@ -679,15 +699,28 @@ details.f[open] .f-more::before{content:"Masquer  \2212"}
   const SERVICE_ON = !!FORM_ENDPOINT;
   document.getElementById('note-mailto').hidden = SERVICE_ON;
   document.getElementById('note-service').hidden = !SERVICE_ON;
+  document.getElementById('form-info').hidden = !SERVICE_ON;
   document.getElementById('legal-mailto').hidden = SERVICE_ON;
   document.getElementById('legal-service').hidden = !SERVICE_ON;
-  if (UMAMI_ID) {
+  const CK='teranga-audience';
+  const getC=()=>{try{return localStorage.getItem(CK);}catch(e){return null;}};
+  const setC=v=>{try{localStorage.setItem(CK,v);}catch(e){}};
+  const cb=document.getElementById('cb');
+  function loadUmami(){
+    if (!UMAMI_ID || document.getElementById('umami-s')) return;
     const s = document.createElement('script');
-    s.defer = true; s.src = 'https://cloud.umami.is/script.js';
+    s.id='umami-s'; s.defer = true; s.src = 'https://cloud.umami.is/script.js';
     s.setAttribute('data-website-id', UMAMI_ID);
     s.setAttribute('data-do-not-track', 'true');
     document.head.appendChild(s);
+  }
+  if (UMAMI_ID) {
     document.getElementById('legal-umami').hidden = false;
+    const c=getC();
+    if (c==='oui') loadUmami(); else if (c!=='non') cb.hidden=false;
+    document.getElementById('cb-yes').addEventListener('click',()=>{setC('oui');cb.hidden=true;loadUmami();});
+    document.getElementById('cb-no').addEventListener('click',()=>{setC('non');cb.hidden=true;});
+    const manage=document.getElementById('manage-audience'); if(manage){manage.hidden=false;manage.addEventListener('click',()=>{cb.hidden=false;});}
   }
   const track = name => { try { if (window.umami) window.umami.track(name); } catch (e) {} };
 
